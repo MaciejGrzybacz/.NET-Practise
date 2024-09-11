@@ -1,11 +1,10 @@
 *
 
 !*/
-
 !.gitignore
 !README.md
-
 !LINQ_exercises/**
+!DesignPatterns/**
 
 .idea/
 *.sln.iml
