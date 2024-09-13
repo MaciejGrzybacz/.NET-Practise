@@ -18,6 +18,9 @@ Behavioral patterns are concerned with communication between objects. They defin
 - #### Visitor Pattern
    - The **Visitor Pattern** allows you to separate algorithms from the objects on which they operate. It lets you define new operations without changing the classes of the elements on which they operate. This pattern is useful when you have to perform multiple operations on objects of different types.
    You can find the implementation of the Visitor pattern in the `Behavioral/Visitor.cs` file.
+- #### Template Method Pattern
+   - The **Template Method Pattern** defines the skeleton of an algorithm in a method, deferring some steps to subclasses. It allows subclasses to redefine certain steps of an algorithm without changing its structure. This pattern is useful when you want to define a common algorithm structure but allow subclasses to provide specific implementations for some steps.
+   You can find the implementation of the Template Method pattern in the `Behavioral/TemplateMethod.cs` file.
 
 ### Creational Patterns
 
@@ -35,8 +38,6 @@ Structural patterns are concerned with how classes and objects are composed to f
     - The **Decorator Pattern** allows for the dynamic addition of new behaviors to existing objects without altering their structure. It provides a flexible alternative to subclassing for extending functionality.
       You can find the implementation of the Decorator pattern in the `Structural/Decorator.cs` file.
 
-
-
 ## To be implemented
 - **Behavioral Patterns**
     - Chain of Responsibility
@@ -45,7 +46,6 @@ Structural patterns are concerned with how classes and objects are composed to f
     - Memento
     - State
     - Strategy
-    - Template Method
 - **Creational Patterns**
     - Abstract Factory
     - Builder

@@ -31,35 +31,16 @@ public class Program
         Console.ResetColor();
         MediatorExample mediator = new MediatorExample();
         mediator.Run();
+        
+        Console.ForegroundColor = ConsoleColor.Yellow;
+        Console.WriteLine("Template Pattern Example:");
+        Console.ResetColor();
+        TemplateExample template = new TemplateExample();
+        template.Run();
     }
     
     public static void RunAllCreationalExamples()
     {
-        // Console.ForegroundColor = ConsoleColor.Yellow;
-        // Console.WriteLine("Abstract Factory Pattern Example:");
-        // Console.ResetColor();
-        // AbstractFactoryExample abstractFactory = new AbstractFactoryExample();
-        // abstractFactory.Run();
-        //
-        // Console.ForegroundColor = ConsoleColor.Yellow;
-        // Console.WriteLine("Builder Pattern Example:");
-        // Console.ResetColor();
-        // BuilderExample builder = new BuilderExample();
-        // builder.Run();
-        //
-        // Console.ForegroundColor = ConsoleColor.Yellow;
-        // Console.WriteLine("Factory Method Pattern Example:");
-        // Console.ResetColor();
-        // FactoryMethodExample factoryMethod = new FactoryMethodExample();
-        // factoryMethod.Run();
-        //
-        // Console.ForegroundColor = ConsoleColor.Yellow;
-        // Console.WriteLine("Prototype Pattern Example:");
-        // Console.ResetColor();
-        // PrototypeExample prototype = new PrototypeExample();
-        // prototype.Run();
-        //
-        
         Console.ForegroundColor = ConsoleColor.Yellow;
         Console.WriteLine("Singleton Pattern Example:");
         Console.ResetColor();
