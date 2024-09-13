@@ -33,26 +33,11 @@ Extension (optional):
 - Implement more complex interaction scenarios between devices.
 */
 
-/*
-Task 1: Mediator Interface
-- Define a SmartHomeMediator interface with a Notify(sender, event) method.
-- The Notify method should accept a sender (device) and an event type.
-*/
 public interface IMediator
 {
     public void Notify(SmartDevice sender, string eventName);
 }
 
-/*
-Task 2: Concrete Mediator
-- Create a SmartHomeHub class implementing the SmartHomeMediator interface.
-- The class should store references to all managed devices.
-- Implement a constructor that takes all devices as parameters.
-- In the Notify method, implement logic to react to various events, e.g.:
-  * Motion detection: turn on lights and activate the alarm
-  * Temperature change: adjust air conditioning
-  * Night mode activation: change settings for all devices
-*/
 public class SmartHomeHub : IMediator
 {
     private LightningSystem _lightningSystem;
@@ -104,12 +89,7 @@ public class SmartHomeHub : IMediator
         }
     }
 }
-/*
-Task 3: Base Device Class
-- Create an abstract SmartDevice class.
-- Add a protected mediator field of type SmartHomeMediator.
-- Implement a setMediator(mediator) method to set the mediator.
-*/
+
 public abstract class SmartDevice
 {
     protected IMediator SmartHomeMediator;
@@ -119,15 +99,7 @@ public abstract class SmartDevice
         this.SmartHomeMediator = mediator;
     }
 }
-/*
-Task 4: Lighting System
-- Create a LightingSystem class inheriting from SmartDevice.
-- Implement the following methods:
-  * turnOnLights(): turn on the lights
-  * adjustBrightness(): adjust brightness
-  * activateNightMode(): activate night mode for lighting
-  * motionDetected(): detect motion (notifies the mediator)
-*/
+
 public class LightningSystem : SmartDevice
 {
     public void TurnOnLights()
@@ -151,15 +123,7 @@ public class LightningSystem : SmartDevice
         this.SmartHomeMediator.Notify(this, "MOTION DETECTED!");
     }
 }
-/*
-Task 5: Security System
-- Create a SecuritySystem class inheriting from SmartDevice.
-- Implement the following methods:
-  * activateAlarm(): activate the alarm
-  * activateNightSurveillance(): enable night surveillance mode
-  * startNightMode(): initiate night mode (notifies the mediator)
-  * startDailyMode(): initiate daily mode (notifies the mediator)
-*/
+
 public class SecuritySystem : SmartDevice
 {
     public void ActivateAlarm()
@@ -185,14 +149,6 @@ public class SecuritySystem : SmartDevice
     }
 }
 
-/*
-Task 6: Climate Control System
-- Create a ClimateControl class inheriting from SmartDevice.
-- Implement the following methods:
-  * adjustTemperature(): adjust temperature
-  * setNightTemperature(): set temperature for nighttime
-  * temperatureThresholdReached(): temperature threshold reached (notifies the mediator)
-*/
 public class ClimateControlSystem : SmartDevice
 {
     public void AdjustTemperature()
@@ -211,15 +167,6 @@ public class ClimateControlSystem : SmartDevice
         this.SmartHomeMediator.Notify(this, "TEMPERATURE THRESHOLD REACHED");
     }
 }
-
-/*
-Task 7: Demonstration
-- Create instances of all devices and the mediator.
-- Simulate various scenarios, e.g.:
-  * Motion detection by the lighting system
-  * Temperature threshold reached by the climate control system
-  * Night mode activation by the security system
-*/
 
 public class MediatorExample
 {

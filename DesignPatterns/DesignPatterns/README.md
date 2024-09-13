@@ -2,24 +2,8 @@
 
 This project aims to implement a variety of design patterns in C#. The purpose of this repository is to serve as a reference for learning and understanding how different design patterns can be applied in real-world C# applications.
 
-## Table of Contents
 
-1. [Introduction](#introduction)
-2. [Design Patterns](#design-patterns)
-    - [Behavioral Patterns](#behavioral-patterns)
-        - [Mediator](#mediator-pattern)
-    - [Creational Patterns](#creational-patterns)
-    - [Structural Patterns](#structural-patterns)
-
-## Introduction
-
-This repository focuses on implementing design patterns in C#. Each design pattern is implemented in isolation with clear explanations and examples. The repository will be divided into three main categories:
-
-- **Behavioral Patterns**
-- **Creational Patterns**
-- **Structural Patterns**
-
-## Design Patterns
+## Design Patterns Implemented
 
 ### Behavioral Patterns
 
@@ -33,13 +17,43 @@ Behavioral patterns are concerned with communication between objects. They defin
 
 Creational patterns deal with object creation mechanisms, trying to create objects in a manner suitable to the situation.
 
-*(To be implemented)*
+ - #### Singleton Pattern
+    - The **Singleton Pattern** ensures that a class has only one instance and provides a global point of access to that instance. It is useful when you want to restrict object creation to a single instance to save resources.
+      You can find the implementation of the Singleton pattern in the `Creational/Singleton.cs` file.
 
 ### Structural Patterns
 
-Structural patterns explain how to assemble objects and classes into larger structures while keeping the structures flexible and efficient.
+Structural patterns are concerned with how classes and objects are composed to form larger structures. They define how different components of a system can be connected to work together effectively.
 
-*(To be implemented)*
+- #### Decorator Pattern
+    - The **Decorator Pattern** allows for the dynamic addition of new behaviors to existing objects without altering their structure. It provides a flexible alternative to subclassing for extending functionality.
+      You can find the implementation of the Decorator pattern in the `Structural/Decorator.cs` file.
+
+
+
+## To be implemented
+- **Behavioral Patterns**
+    - Chain of Responsibility
+    - Command
+    - Iterator
+    - Memento
+    - Observer
+    - State
+    - Strategy
+    - Template Method
+    - Visitor
+- **Creational Patterns**
+    - Abstract Factory
+    - Builder
+    - Factory Method
+    - Prototype
+- **Structural Patterns**
+    - Adapter
+    - Bridge
+    - Composite
+    - Facade
+    - Flyweight
+    - Proxy
 
 ## How to Run
 

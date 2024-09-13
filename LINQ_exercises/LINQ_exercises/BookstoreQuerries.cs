@@ -356,6 +356,7 @@ namespace Bookstore
             Console.ResetColor();
             foreach (var year in result) Console.WriteLine($"Year: {year}");
         }
+        
         public static void SeedDatabase(AppDbContext context)
         {
             var authors = new List<Author>
