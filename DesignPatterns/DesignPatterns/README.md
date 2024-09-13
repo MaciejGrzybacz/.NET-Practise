@@ -12,6 +12,12 @@ Behavioral patterns are concerned with communication between objects. They defin
 - #### Mediator Pattern
    - The **Mediator Pattern** defines an object that encapsulates how a set of objects interact. Instead of allowing objects to refer to each other explicitly, they communicate through the mediator. This reduces dependencies between communicating objects, promoting loose coupling.
    You can find the implementation of the Mediator pattern in the `Behavioral/Mediator.cs` file.
+- #### Observer Pattern
+   - The **Observer Pattern** defines a one-to-many dependency between objects so that when one object changes state, all its dependents are notified and updated automatically. This pattern is useful when you need to maintain consistency between related objects without making them tightly coupled.
+   You can find the implementation of the Observer pattern in the `Behavioral/Observer.cs` file.
+- #### Visitor Pattern
+   - The **Visitor Pattern** allows you to separate algorithms from the objects on which they operate. It lets you define new operations without changing the classes of the elements on which they operate. This pattern is useful when you have to perform multiple operations on objects of different types.
+   You can find the implementation of the Visitor pattern in the `Behavioral/Visitor.cs` file.
 
 ### Creational Patterns
 
@@ -37,11 +43,9 @@ Structural patterns are concerned with how classes and objects are composed to f
     - Command
     - Iterator
     - Memento
-    - Observer
     - State
     - Strategy
     - Template Method
-    - Visitor
 - **Creational Patterns**
     - Abstract Factory
     - Builder
