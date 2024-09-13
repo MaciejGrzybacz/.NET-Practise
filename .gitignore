@@ -5,8 +5,10 @@
 !README.md
 !LINQ_exercises/**
 !DesignPatterns/**
+!xUnit_exercises/**
 
 .idea/
+.vs/
 *.sln.iml
 .idea/
 
