@@ -10,41 +10,54 @@ public class Program
     public static void Main()
     {
         RunAllBehavioralExamples();
+        RunAllCreationalExamples();
+        RunAllStructuralExamples();
     }
 
     public static void RunAllBehavioralExamples()
     {
-        Console.ForegroundColor = ConsoleColor.Yellow;
-        Console.WriteLine("Observer Pattern Example:");
+        Console.ForegroundColor = ConsoleColor.Green;
+        Console.WriteLine("Behavioral Design Patterns:");
         Console.ResetColor();
         ObserverExample observer = new ObserverExample();
         observer.Run();
         
-        Console.ForegroundColor = ConsoleColor.Yellow;
-        Console.WriteLine("Visitor Pattern Example:");
-        Console.ResetColor();
         VisitorExample visitor = new VisitorExample();
         visitor.Run();
         
-        Console.ForegroundColor = ConsoleColor.Yellow;
-        Console.WriteLine("Mediator Pattern Example:");
-        Console.ResetColor();
         MediatorExample mediator = new MediatorExample();
         mediator.Run();
         
-        Console.ForegroundColor = ConsoleColor.Yellow;
-        Console.WriteLine("Template Pattern Example:");
-        Console.ResetColor();
         TemplateExample template = new TemplateExample();
         template.Run();
+        
+        ChainOfResponsibilityExample chainOfResponsibility = new ChainOfResponsibilityExample();
+        chainOfResponsibility.Run();
+        
+        Console.WriteLine();
     }
     
     public static void RunAllCreationalExamples()
     {
-        Console.ForegroundColor = ConsoleColor.Yellow;
-        Console.WriteLine("Singleton Pattern Example:");
+        Console.ForegroundColor = ConsoleColor.Green;
+        Console.WriteLine("Creational Design Patterns:");
         Console.ResetColor();
+        
         SingletonExample singleton = new SingletonExample();
         singleton.Run();
+        
+        Console.WriteLine();
+    }
+    
+    public static void RunAllStructuralExamples()
+    {
+        Console.ForegroundColor = ConsoleColor.Green;
+        Console.WriteLine("Structural Design Patterns:");
+        Console.ResetColor();
+        
+        DecoratorExample decorator = new DecoratorExample();
+        decorator.Run();
+        
+        Console.WriteLine();
     }
 }

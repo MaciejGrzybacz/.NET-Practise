@@ -39,9 +39,15 @@ public class SingletonExample
 {
     public void Run()
     {
+        Console.ForegroundColor = ConsoleColor.Yellow;
+        Console.WriteLine("Singleton Pattern Example:");
+        Console.ResetColor();
+        
         Singleton singleton = Singleton.GetInstance();
         Singleton anotherSingleton = Singleton.GetInstance();
         
         Console.WriteLine($"Are both instances equals? {singleton == anotherSingleton}");
+        
+        Console.WriteLine();
     }
 }

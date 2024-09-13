@@ -172,25 +172,30 @@ public class MediatorExample
 {
     public void Run()
     {
+        Console.ForegroundColor = ConsoleColor.Yellow;
+        Console.WriteLine("Observer Pattern Example:");
+        Console.ResetColor();
+        
         LightningSystem lightningSystem = new LightningSystem();
         SecuritySystem securitySystem = new SecuritySystem();
         ClimateControlSystem climateControlSystem = new ClimateControlSystem();
         
         SmartHomeHub smartHomeHub = new SmartHomeHub(lightningSystem, securitySystem, climateControlSystem);
         
-        Console.ForegroundColor = ConsoleColor.Yellow;
+        Console.ForegroundColor = ConsoleColor.Red;
         Console.WriteLine("Motion detection scenario:");
         Console.ResetColor();
         lightningSystem.MotionDetection();
         Console.WriteLine();
-        Console.ForegroundColor = ConsoleColor.Yellow;
+        Console.ForegroundColor = ConsoleColor.Red;
         Console.WriteLine("Temperature threshold scenario:");
         Console.ResetColor();
         climateControlSystem.TemperatureThresholdReached();
         Console.WriteLine();
-        Console.ForegroundColor = ConsoleColor.Yellow;
+        Console.ForegroundColor = ConsoleColor.Red;
         Console.WriteLine("Night mode activation scenario:");
         Console.ResetColor();
         securitySystem.StartNightMode();
+        Console.WriteLine();
     }
 }

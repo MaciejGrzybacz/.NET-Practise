@@ -70,6 +70,10 @@ public class VisitorExample
 {
     public void Run()
     {
+        Console.ForegroundColor = ConsoleColor.Yellow;
+        Console.WriteLine("Observer Pattern Example:");
+        Console.ResetColor();
+        
         List<IShape> shapes = new List<IShape>
         {
             new Circle(5),
@@ -85,5 +89,6 @@ public class VisitorExample
         }
 
         Console.WriteLine($"Total area: {areaCalculator.TotalArea}");
+        Console.WriteLine();
     }
 }

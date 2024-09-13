@@ -93,11 +93,16 @@ class DecoratorExample
 {
    public void Run()
    {
+      Console.ForegroundColor = ConsoleColor.Yellow;
+      Console.WriteLine("Singleton Pattern Example:");
+      Console.ResetColor();
+      
       Printer printer = new Printer();
       DecoratorA decoratorA = new DecoratorA(printer);
       DecoratorB decoratorB = new DecoratorB(decoratorA);
 
       Console.WriteLine(decoratorB.PrintMessage());
+      Console.WriteLine();
    }
 }
 

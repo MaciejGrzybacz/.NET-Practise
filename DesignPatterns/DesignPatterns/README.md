@@ -21,7 +21,10 @@ Behavioral patterns are concerned with communication between objects. They defin
 - #### Template Method Pattern
    - The **Template Method Pattern** defines the skeleton of an algorithm in a method, deferring some steps to subclasses. It allows subclasses to redefine certain steps of an algorithm without changing its structure. This pattern is useful when you want to define a common algorithm structure but allow subclasses to provide specific implementations for some steps.
    You can find the implementation of the Template Method pattern in the `Behavioral/TemplateMethod.cs` file.
-
+- #### Chain of Responsibility Pattern
+   - The **Chain of Responsibility Pattern** allows you to pass a request along a chain of handlers. Each handler decides either to process the request or to pass it to the next handler in the chain. This pattern is useful when you want to decouple senders and receivers of requests.
+   You can find the implementation of the Chain of Responsibility pattern in the `Behavioral/ChainOfResponsibility.cs` file.
+  
 ### Creational Patterns
 
 Creational patterns deal with object creation mechanisms, trying to create objects in a manner suitable to the situation.
@@ -40,11 +43,10 @@ Structural patterns are concerned with how classes and objects are composed to f
 
 ## To be implemented
 - **Behavioral Patterns**
-    - Chain of Responsibility
     - Command
     - Iterator
     - Memento
-    - State
+    - State 
     - Strategy
 - **Creational Patterns**
     - Abstract Factory

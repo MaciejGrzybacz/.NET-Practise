@@ -89,6 +89,10 @@ public class TemplateExample
 {
     public void Run()
     {
+        Console.ForegroundColor = ConsoleColor.Yellow;
+        Console.WriteLine("Observer Pattern Example:");
+        Console.ResetColor();
+       
         Console.WriteLine("Smart Home System A:");
         SmartHomeTemplate smartHomeA = new ConcreteSmartHomeA();
         smartHomeA.RunSmartHomeSystem();
@@ -98,5 +102,6 @@ public class TemplateExample
         Console.WriteLine("Smart Home System B:");
         SmartHomeTemplate smartHomeB = new ConcreteSmartHomeB();
         smartHomeB.RunSmartHomeSystem();
+        Console.WriteLine();
     }
 }

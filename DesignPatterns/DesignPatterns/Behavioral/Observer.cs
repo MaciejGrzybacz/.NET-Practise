@@ -128,6 +128,9 @@ public class ObserverExample
 {
     public void Run()
     {
+        Console.ForegroundColor = ConsoleColor.Yellow;
+        Console.WriteLine("Observer Pattern Example:");
+        Console.ResetColor();
         WeatherStation weatherStation = new WeatherStation();
 
         CurrentConditionsDisplay currentDisplay = new CurrentConditionsDisplay(weatherStation);
@@ -138,5 +141,6 @@ public class ObserverExample
         weatherStation.SetMeasurements(21, 70, 1001);
         Console.WriteLine();
         weatherStation.SetMeasurements(25, 90, 999);
+        Console.WriteLine();
     }
 }
