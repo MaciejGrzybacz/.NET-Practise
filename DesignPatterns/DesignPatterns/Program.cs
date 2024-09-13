@@ -1,12 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
+using DesignPatterns.Behavioral;
+using DesignPatterns.Creational;
+using DesignPatterns.Structural;
 
 
 public class Program
 {
     public static void Main()
     {
-        MediatorExample example = new MediatorExample();
+        VisitorExample example = new VisitorExample();
         example.Run();
     }
 }
